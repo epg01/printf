@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _Printf - Function that works almost the same as printf.
+ * _printf - Function that works almost the same as printf.
  * @format: Pointer to the first argument passed to the function, which in
  *          this case is a string stored in the heap.
  * Return: Returns the number of characters that was printed.
