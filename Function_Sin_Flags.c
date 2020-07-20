@@ -13,7 +13,7 @@ int Print_String(va_list Lista)
 
 	if (!String)
 	{
-		write(1,"(null)",6);
+		write(1, "(null)", 6);
 		Counter_Bits = 6;
 	}
 	else
