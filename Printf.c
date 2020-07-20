@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 	 *                               this is returned to the environment
 	 *                               I call it
 	 */
-
 	int (*FunctFmtSinFlag)(va_list), Number_Of_Character_Impreso = 0;
 	va_list Pointer_Argument;
 
@@ -45,5 +44,8 @@ int _printf(const char *format, ...)
 			write(1, &(*format++), 1), Number_Of_Character_Impreso++;
 	}
 	va_end(Pointer_Argument);
+
+	if (!format)
+		return (-1);
 	return (Number_Of_Character_Impreso);
 }

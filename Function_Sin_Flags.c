@@ -1,19 +1,6 @@
 #include "holberton.h"
 
 /**
- * Print_Null - Function that prints me null
- * @String: Pointer to string (null).
- * Return: Number 6.
- */
-
-int Print_Null(char *String)
-{
-	while (*String)
-		write(1, &(*String++), 1);
-	return (6);
-}
-
-/**
  * Print_String - Function that prints a whole string without the null chara.
  * @Lista: Variable that contains the printf arguments.
  * Return: Returns printed characters
@@ -22,13 +9,16 @@ int Print_Null(char *String)
 int Print_String(va_list Lista)
 {
 	char *String = va_arg(Lista, char *);
-	int Counter_Bits;
+	int Counter_Bits = 0;
 
 	if (!String)
-		return (Print_Null("(null)"));
-
-	for (Counter_Bits = 0; *String; Counter_Bits++)
-		write(1, &(*String++), 1);
+	{
+		write(1,"(null)",6);
+		Counter_Bits = 6;
+	}
+	else
+		for (; *String; Counter_Bits++)
+			write(1, &(*String++), 1);
 	return (Counter_Bits);
 }
 
