@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * Print_NULL - Function that prints me null
+ * @String: Pointer to string (null).
+ * Return: Number 6.
+ */
+
 int Print_Null(char *String)
 {
 	while (*String)
@@ -34,14 +40,10 @@ int Print_String(va_list Lista)
 
 int Print_Character(va_list Lista)
 {
-	char Solve_Character = (char)va_arg(Lista, int);
+	int Solve_Character = (char)va_arg(Lista, int);
 
-	if (Solve_Character)
-	{
-		write(1, &Solve_Character, 1);
-		return (1);
-	}
-	return (0);
+	write(1, &Solve_Character, 1);
+	return (1);
 }
 
 /**
