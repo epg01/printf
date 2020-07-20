@@ -36,13 +36,12 @@ int Print_Character(va_list Lista)
 {
 	char Solve_Character = (char)va_arg(Lista, int);
 
-	if (!Solve_Character)
+	if (Solve_Character)
 	{
 		write(1, &Solve_Character, 1);
-		return (0);
+		return (1);
 	}
-	write(1, &Solve_Character, 1);
-	return (1);
+	return (0);
 }
 
 /**
