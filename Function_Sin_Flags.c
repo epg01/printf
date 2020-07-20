@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+int Print_Null(char *String)
+{
+	while (*String)
+		write(1, &(*String++), 1);
+	return (6);
+}
+
 /**
  * Print_String - Function that prints a whole string without the null chara.
  * @Lista: Variable that contains the printf arguments.
@@ -12,12 +19,7 @@ int Print_String(va_list Lista)
 	int Counter_Bits;
 
 	if (!String)
-	{
-		String = "(null)";
-		while (*String)
-			write(1, &(*String++), 1);
-		return (6);
-	}
+		return (Print_Null("(null)"));
 
 	for (Counter_Bits = 0; *String; Counter_Bits++)
 		write(1, &(*String++), 1);
@@ -32,8 +34,13 @@ int Print_String(va_list Lista)
 
 int Print_Character(va_list Lista)
 {
-	int Solve_Character = (char)va_arg(Lista, int);
+	char Solve_Character = (char)va_arg(Lista, int);
 
+	if (!Solve_Character)
+	{
+		write(1, &Solve_Character, 1);
+		return (0);
+	}
 	write(1, &Solve_Character, 1);
 	return (1);
 }
