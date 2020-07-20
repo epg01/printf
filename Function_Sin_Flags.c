@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * Print_NULL - Function that prints me null
+ * Print_Null - Function that prints me null
  * @String: Pointer to string (null).
  * Return: Number 6.
  */
