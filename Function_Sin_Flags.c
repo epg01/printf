@@ -11,6 +11,14 @@ int Print_String(va_list Lista)
 	char *String = va_arg(Lista, char *);
 	int Counter_Bits;
 
+	if (!String)
+	{
+		String = "(null)";
+		while (*String)
+			write(1, &(*String++), 1);
+		return (6);
+	}
+
 	for (Counter_Bits = 0; *String; Counter_Bits++)
 		write(1, &(*String++), 1);
 	return (Counter_Bits);
