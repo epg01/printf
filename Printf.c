@@ -33,7 +33,11 @@ int _printf(const char *format, ...)
 			 */
 
 			FunctFmtSinFlag = get_op((const char **)Isspace((const char **)&(format)));
-			format++;
+
+			if (*format)
+				format++;
+			else
+				return (-1);
 
 			if (FunctFmtSinFlag)
 				Number_Of_Character_Impreso += FunctFmtSinFlag(Pointer_Argument);
