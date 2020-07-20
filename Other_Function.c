@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * Isspace - Function that ignores space characters.
+ * Isspace - Function that ignores space characters
  * @String: Contains the address of format -> format is related to the
  *          format variable of the _printf function.
  * Return: Returns the format address.
