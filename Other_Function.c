@@ -29,7 +29,7 @@ Isspace(const char **String)
  */
 int Print_Unknown(const char *String)
 {
-	write(1,"%",1);
+	write(1, "%", 1);
 	write(1, &(*String), 1);
 
 	return (2);
