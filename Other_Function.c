@@ -3,16 +3,16 @@
 /**
  * print_number - prints an integer char by char
  * @Number: The integer to print
+ * Return: Return Length of the Number.
  */
 
 int print_number(int Number)
 {
 	int  SolveCharacter;
-	signed int PowerOf10;
+	long int PowerOf10;
 	unsigned char State, State0, Length = 0;
 
 	State = PowerOf10 =  State0 = 1, SolveCharacter = 0;
-
 	while (PowerOf10)
 	{
 		if ((Number < 0) && State0)
@@ -35,8 +35,7 @@ int print_number(int Number)
 			else
 			{
 				SolveCharacter = Number / PowerOf10 % 10;
-				SolveCharacter *= (-1);
-				SolveCharacter += '0';
+				SolveCharacter *= (-1), SolveCharacter += '0';
 			}
 			PowerOf10 /= POWER_OF_10;
 		}
@@ -86,13 +85,15 @@ int Print_Unknown(const char *String)
 }
 
 /**
- * 
- *
+ * Print_Binario - Function to print binary numbers.
+ * @Number: Number to convert to binary.
+ * @Legth: Printed character length.
+ * Return: Length of the number.
  */
 
-int Print_Binario(int Number, int Legth_Of_Characer_impresos)
+int Print_Binario(int Number, int Legth)
 {
-        if ((Number / 2) == 1)
+	if ((Number / 2) == 1)
 	{
 		int Number2 = Number / 2 + '0';
 
@@ -100,18 +101,18 @@ int Print_Binario(int Number, int Legth_Of_Characer_impresos)
 
 		Number = Number % 2 + '0';
 		write(1, &Number, 1);
-		return (Legth_Of_Characer_impresos + 2);
+		return (Legth + 2);
 	}
 	if ((Number / 2) == 0)
 	{
 		Number = Number % 2 + '0';
 		write(1, &Number, 1);
-                return (Legth_Of_Characer_impresos + 1);
+		return (Legth + 1);
 	}
 	else
-		Legth_Of_Characer_impresos = Print_Binario(Number / 2, ++Legth_Of_Characer_impresos);
+		Legth = Print_Binario(Number / 2, ++Legth);
 
 	Number = Number % 2 + '0';
 	write(1, &Number, 1);
-	return (Legth_Of_Characer_impresos);
+	return (Legth);
 }
