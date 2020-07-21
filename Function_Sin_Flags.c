@@ -60,3 +60,17 @@ int Print_Integer(va_list Lista)
 {
 	return (print_number(va_arg(Lista, int)));
 }
+
+/**
+ *
+ *
+ */
+
+int Print_Number_Binario(va_list Lista)
+{
+	int Bits;
+
+	Bits = Print_Binario(va_arg(Lista,unsigned int), 0);
+
+	return (Bits);
+}
