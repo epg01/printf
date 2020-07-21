@@ -73,6 +73,7 @@ int Print_Unknown(const char *String);
 int rot13(char *s);
 int String_Print(char *String);
 int _print_rev_recursion(char *ArrayCharacter, int Counter);
+int Print_Hexadecimal_UpperCase(int Number, int Counter);
 
 /*
  * Printf function prototype.
