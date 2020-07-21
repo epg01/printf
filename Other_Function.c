@@ -40,11 +40,7 @@ int print_number(int Number)
 			PowerOf10 /= POWER_OF_10;
 		}
 		if (SolveCharacter)
-		{
-			write(1, &(SolveCharacter), 1);
-			if (SolveCharacter != '-')
-				Length++;
-		}
+			write(1, &(SolveCharacter), 1), Length++;
 	}
 	return (Length);
 }
