@@ -24,6 +24,7 @@ int (*get_op(const char **Character))(va_list Lista)
 		{"u",  Print_Unsigned_Integer},
 		{"o",  Print_Octal},
 		{"S",  Print_STRING},
+		{"p",  Print_Address},
 		{'\0', NULL}
 	};
 

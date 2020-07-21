@@ -54,5 +54,13 @@ int Print_Unsigned_Integer(va_list Lista)
 
 int Print_STRING(va_list Lista)
 {
-	return (PrintSTRING(va_arg(Lista, char *)));
+	char *String = va_arg(Lista, char*);
+
+	if (String)
+		return (PrintSTRING(String));
+	else
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 }
