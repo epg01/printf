@@ -69,9 +69,5 @@ int Print_Integer(va_list Lista)
 
 int Print_Number_Binario(va_list Lista)
 {
-	int Bits;
-
-	Bits = Print_Binario((long int)va_arg(Lista, unsigned int), 0);
-
-	return (Bits);
+	return (Print_Binario((long int)va_arg(Lista, unsigned int), 0));
 }

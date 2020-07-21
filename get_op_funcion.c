@@ -19,6 +19,10 @@ int (*get_op(const char **Character))(va_list Lista)
 		{"%",  Print_Porcentaje},
 		{"id", Print_Integer},
 		{"b",  Print_Number_Binario},
+		{"X",  Print_Hexagecimal_UpperCase},
+		{"x",  Print_Hexagecimal_LowerCase},
+		{"u",  Print_Unsigned_Integer},
+		{"o",  Print_Octal},
 		{'\0', NULL}
 	};
 
