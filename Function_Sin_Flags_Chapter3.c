@@ -22,7 +22,7 @@ int Print_Address(va_list Lista)
 	else
 	{
 		write(1, "(nil)", 5);
-		return (6);
+		return (5);
 	}
 }
 
