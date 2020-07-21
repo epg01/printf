@@ -26,6 +26,7 @@ int (*get_op(const char **Character))(va_list Lista)
 		{"S",  Print_STRING},
 		{"p",  Print_Address},
 		{"R",  Print_Rot13},
+		{"r",  Print_String_Reverse},
 		{'\0', NULL}
 	};
 

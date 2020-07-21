@@ -44,3 +44,16 @@ int String_Print(char *String)
 		write(1, &(*String++), 1);
 	return (Counter_Bits);
 }
+
+int _print_rev_recursion(char *String, int Counter_Character)
+{
+	if (!(*String))
+	{
+		return (Counter_Character);
+	}
+	else
+		Counter_Character = _print_rev_recursion((String + 1), ++Counter_Character);
+	write(1, &(*String), 1);
+
+	return (Counter_Character);
+}

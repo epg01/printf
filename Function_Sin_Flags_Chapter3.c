@@ -49,3 +49,19 @@ int Print_Rot13(va_list Lista)
 		return (6);
 	}
 }
+int Print_String_Reverse(va_list Lista)
+{
+	char *String = va_arg(Lista, char *);
+
+	if (String)
+	{
+		int Counter;
+		Counter = _print_rev_recursion(String, 0);
+		return (Counter);
+	}
+	else
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+}
