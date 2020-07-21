@@ -73,5 +73,5 @@ int Print_Number_Binario(va_list Lista)
 
 	Bits = Print_Binario(va_arg(Lista, unsigned int), 0);
 
-	return (Bits - 1);
+	return (Bits);
 }
