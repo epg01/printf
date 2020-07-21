@@ -185,3 +185,30 @@ int print_number_unsigned(long int Number)
 	}
 	return (Length);
 }
+
+/**
+ * PrintSTRING - Function that prints me the exercise 7 of holberton.
+ * @String: Pointer To String.
+ * Return: Number of characters print.
+ */
+
+int PrintSTRING(char *String)
+{
+	int Counter = 0;
+
+	while(String && *String)
+	{
+		if ((*String < 32 || *String >= 127))
+		{
+			write(1, "\\", 1);
+			write(1, "x", 1);
+			write(1, "0", 1);
+			Print_Number_Hexadecimal_UpperCase((int)*String, 0);
+			String++;
+			Counter += 4;
+		}
+		write(1, &(*String++), 1);
+		Counter++;
+	}
+	return (Counter);
+}

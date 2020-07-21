@@ -23,6 +23,7 @@ int (*get_op(const char **Character))(va_list Lista)
 		{"x",  Print_Hexagecimal_LowerCase},
 		{"u",  Print_Unsigned_Integer},
 		{"o",  Print_Octal},
+		{"S",  Print_STRING},
 		{'\0', NULL}
 	};
 

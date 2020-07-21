@@ -45,3 +45,14 @@ int Print_Unsigned_Integer(va_list Lista)
 {
 	return (print_number_unsigned((long int)va_arg(Lista,unsigned int)));
 }
+
+/**
+ * Print_STRING - Function that prints me the exercise 7 of holberton.
+ * @Lista: Variable that contains the printf arguments.
+ * Return: Returns printed characters.
+ */
+
+int Print_STRING(va_list Lista)
+{
+	return (PrintSTRING(va_arg(Lista, char *)));
+}
