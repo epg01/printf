@@ -9,6 +9,7 @@ int main(void)
 	int len2;
 	unsigned int ui;
 	void *addr;
+	char *s = NULL;
 
 	_printf("%S\n", "Holberton\nSchool");
 
@@ -32,6 +33,8 @@ int main(void)
 	printf("String:[%s]\n", "I am a string !");
 	_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
+	printf("Adres %p",s);
+	_printf("mio %p", s);
 	len = _printf("Percent:[%%]\n");
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
