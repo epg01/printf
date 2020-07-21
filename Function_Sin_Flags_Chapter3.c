@@ -15,7 +15,7 @@ int Print_Address(va_list Lista)
 		int Bits;
 
 		write(1, "0x", 2);
-		Bits = Print_Number_Hexadecimal_LowerCase((long int)Pointer, 0);
+		Bits = Print_Number_Hexadecimal_LowerCase((unsigned long int)Pointer, 0);
 		return (Bits + 2);
 
 	}

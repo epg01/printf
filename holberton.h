@@ -66,7 +66,7 @@ int print_number(int Number);
 int print_number_unsigned(long int Number);
 int Print_Binario(long int Number, int Legth_Of_Characer_impresos);
 int Print_Number_Octal(long int Number, int Legth_Of_Characer_impresos);
-int Print_Number_Hexadecimal_LowerCase(long int Number, int LegthCharacerimpr);
+int Print_Number_Hexadecimal_LowerCase(unsigned long int Number, int Legth);
 int Print_Number_Hexadecimal_UpperCase(long int Number, int LegthCharacerimpr);
 int PrintSTRING(char *String);
 int Print_Unknown(const char *String);

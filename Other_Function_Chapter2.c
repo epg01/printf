@@ -33,7 +33,7 @@ int Print_Number_Octal(long int Number, int Legth)
 	return (Legth);
 }
 
-int Print_Number_Hexadecimal_LowerCase(long int Number, int Legth)
+int Print_Number_Hexadecimal_LowerCase(unsigned long int Number, int Legth)
 {
 	if ((Number / 16) == 1)
 	{
