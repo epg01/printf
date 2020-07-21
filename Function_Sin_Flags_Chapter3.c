@@ -36,9 +36,13 @@ int Print_Address(va_list Lista)
 int Print_Rot13(va_list Lista)
 {
 	char *String_Rot13 = (va_arg(Lista, char *));
+	int Counter_Character_impresos;
 
 	if (String_Rot13)
-		return (rot13(String_Rot13));
+	{
+		Counter_Character_impresos = rot13(String_Rot13);
+		return (Counter_Character_impresos);
+	}
 	else
 	{
 		write(1, "(null)", 6);
