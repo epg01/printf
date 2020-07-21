@@ -6,23 +6,27 @@
  * Return: a char pointer to the encoded string.
  */
 
-int rot13(char *s)
+int rot13(char *String)
 {
 	int i;
 	int j;
+	char String1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char String2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int counter_Character = 0;
 
-	char base[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char coded[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	for (i = 0; s[i] != '\0'; i++)
-		for (j = 0; base[j] != 0; j++)
-			if (s[i] == base[j])
+	for (i = 0; String[i] != '\0'; i++)
+	{
+		for (j = 0; String1[j] != '\0'; j++)
+		{
+			if (String[i] == String1[j])
 			{
-				write (1, &coded[j], 1);
-				counter_Character++;
+				write(1, &String2[j], 1), counter_Character++;
 				break;
 			}
+		}
+		if (!String1[j])
+			write(1, &String[i], 1), counter_Character++;
+	}
 	return (counter_Character);
 }
 
