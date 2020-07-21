@@ -35,7 +35,13 @@ int Print_Address(va_list Lista)
 
 int Print_Rot13(va_list Lista)
 {
-	char *String_Rot13 = rot13(va_arg(Lista, char *));
+	char *String_Rot13 = (va_arg(Lista, char *));
 
-	return (String_Print(String_Rot13));
+	if (String_Rot13)
+		return (rot13(String_Rot13));
+	else
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 }

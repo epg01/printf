@@ -9,8 +9,9 @@ int main(void)
 	int len2;
 	unsigned int ui;
 	void *addr;
-	char *s = NULL;
+	char *s = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
 	char *p;
+	p= s;
 
 	_printf("%S\n", "Holberton\nSchool");
 
@@ -39,13 +40,11 @@ int main(void)
 
 
 
-	p = rot13(s);
-
 	_printf("%R\n", p);
 
-	p = rot13(p);
-
+	p = NULL;
 	_printf("%R\n", p);
+
 	(void)p;
 
 	_printf("Unknown:[%r]\n");

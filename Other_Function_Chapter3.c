@@ -6,27 +6,24 @@
  * Return: a char pointer to the encoded string.
  */
 
-char *rot13(char *s)
+int rot13(char *s)
 {
 	int i;
 	int j;
+	int counter_Character = 0;
 
 	char base[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char coded[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	if (s)
-	{
-		for (i = 0; s[i] != '\0'; i++)
-			for (j = 0; base[j] != 0; j++)
-				if (s[i] == base[j])
-				{
-					s[i] = coded[j];
-					break;
-				}
-		return (s);
-	}
-	else
-		return (NULL);
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; base[j] != 0; j++)
+			if (s[i] == base[j])
+			{
+				write (1, &coded[j], 1);
+				counter_Character++;
+				break;
+			}
+	return (counter_Character);
 }
 
 /**
@@ -39,13 +36,7 @@ int String_Print(char *String)
 {
 	int Counter_Bits = 0;
 
-	if (!String)
-	{
-		write(1, "(null)", 6);
-		Counter_Bits = 6;
-	}
-	else
-		for (; *String; Counter_Bits++)
-			write(1, &(*String++), 1);
+	for (; *String; Counter_Bits++)
+		write(1, &(*String++), 1);
 	return (Counter_Bits);
 }

@@ -69,7 +69,7 @@ int Print_Number_Hexadecimal_LowerCase(long int Number, int LegthCharacerimpr);
 int Print_Number_Hexadecimal_UpperCase(long int Number, int LegthCharacerimpr);
 int PrintSTRING(char *String);
 int Print_Unknown(const char *String);
-char *rot13(char *s);
+int rot13(char *s);
 int String_Print(char *String);
 
 /*
