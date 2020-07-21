@@ -61,7 +61,7 @@ int (*get_op(const char **Character))(va_list Lista);
  */
 
 const char **Isspace(const char **String);
-void print_number(int Number);
+int print_number(int Number);
 void print_number_unsigned(long int Number);
 int Print_Binario(int Number, int Legth_Of_Characer_impresos);
 int Print_Number_Octal(long int Number, int Legth_Of_Characer_impresos);

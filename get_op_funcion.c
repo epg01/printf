@@ -17,6 +17,7 @@ int (*get_op(const char **Character))(va_list Lista)
 		{"c",  Print_Character},
 		{"s",  Print_String},
 		{"%",  Print_Porcentaje},
+		{"id", Print_Integer},
 		{'\0', NULL}
 	};
 

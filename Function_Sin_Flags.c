@@ -49,3 +49,14 @@ int Print_Porcentaje(va_list Lista)
 	write(1, "%", 1);
 	return (1);
 }
+
+/**
+ * Print_Porcentaje -  Function that prints el character "%"
+ * @Lista: Variable that contains the printf arguments.
+ * Return: Returns printed characters.
+ */
+
+int Print_Integer(va_list Lista)
+{
+	return (print_number(va_arg(Lista, int)));
+}
