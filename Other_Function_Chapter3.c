@@ -117,7 +117,7 @@ int Print_Hexadecimal_UpperCase(int Number, int Legth)
 		return (Legth + 1);
 	}
 	else
-		Legth = Print_Number_Hexadecimal_LowerCase(Number / 16, ++Legth);
+		Legth = Print_Hexadecimal_UpperCase(Number / 16, ++Legth);
 	Number = Number % 16;
 	if (Number < 10)
 	{

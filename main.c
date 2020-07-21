@@ -7,7 +7,7 @@ int main(void)
 {
 	int len;
 
-	len = _printf("%S\n", "Holberton\nSchool");
+	len = _printf("%S\n", "HolbertonëSchool");
 
 	_printf("%d", len);
 

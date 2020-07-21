@@ -198,7 +198,7 @@ int PrintSTRING(char *String)
 
 	while(String && *String)
 	{
-		if (((*String > 0) && (*String < 32)) || (*String >= 127))
+		if (((*String) && (*String < 32)) || ((*String) >= 127))
 		{
 			write(1, "\\x", 2);
 			Print_Hexadecimal_UpperCase((int)*String, 0);
