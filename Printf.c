@@ -24,21 +24,12 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			/*
-			 * 1. We verify with the Isspace function: Skip the
-			 *    space characters that are between the% and the
-			 *    character to be evaluated.
-			 * 2. We enter the special character to the function
-			 *    get_op
-			 */
-
 			FunctFmtSinFlag = get_op((const char **)Isspace((const char **)&(format)));
 
 			if (*format)
 				format++;
 			else
 				return (-1);
-
 			if (FunctFmtSinFlag)
 				Number_Of_Character_Impreso += FunctFmtSinFlag(Pointer_Argument);
 			else
@@ -48,7 +39,6 @@ int _printf(const char *format, ...)
 			write(1, &(*format++), 1), Number_Of_Character_Impreso++;
 	}
 	va_end(Pointer_Argument);
-
 	if (!format)
 		return (-1);
 	return (Number_Of_Character_Impreso);
