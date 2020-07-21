@@ -51,7 +51,7 @@ int Print_Octal(va_list Lista);
 int Print_Number_Binario(va_list Lista);
 int Print_STRING(va_list Lista);
 int Print_Address(va_list Lista);
-
+int Print_Rot13(va_list Lista);
 
 int (*get_op(const char **Character))(va_list Lista);
 
@@ -69,6 +69,8 @@ int Print_Number_Hexadecimal_LowerCase(long int Number, int LegthCharacerimpr);
 int Print_Number_Hexadecimal_UpperCase(long int Number, int LegthCharacerimpr);
 int PrintSTRING(char *String);
 int Print_Unknown(const char *String);
+char *rot13(char *s);
+int String_Print(char *String);
 
 /*
  * Printf function prototype.

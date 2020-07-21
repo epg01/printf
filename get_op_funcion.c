@@ -25,6 +25,7 @@ int (*get_op(const char **Character))(va_list Lista)
 		{"o",  Print_Octal},
 		{"S",  Print_STRING},
 		{"p",  Print_Address},
+		{"R",  Print_Rot13},
 		{'\0', NULL}
 	};
 

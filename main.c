@@ -10,6 +10,7 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 	char *s = NULL;
+	char *p;
 
 	_printf("%S\n", "Holberton\nSchool");
 
@@ -31,15 +32,22 @@ int main(void)
 	printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");
-	_printf("Address:[%p]\n", addr);
-	printf("Address:[%p]\n", addr);
-	printf("Adres %p",s);
-	_printf("mio %p", s);
-	len = _printf("Percent:[%%]\n");
-	len2 = printf("Percent:[%%]\n");
-	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);
+	_printf("Address_Printf:[%p]\n", addr);
+	printf("Addressdelprintf real:[%p]\n", addr);
+
+
+
+
+
+	p = rot13(s);
+
+	_printf("%R\n", p);
+
+	p = rot13(p);
+
+	_printf("%R\n", p);
+	(void)p;
+
 	_printf("Unknown:[%r]\n");
-	printf("Unknown:[%r]\n");
 	return (0);
 }

@@ -26,3 +26,16 @@ int Print_Address(va_list Lista)
 		return (6);
 	}
 }
+
+/**
+ * Print_Rot13 - Function that prints rot13.
+ * @Lista: Variable that contains the printf arguments.
+ * Return: Returns printed characters.
+ */
+
+int Print_Rot13(va_list Lista)
+{
+	char *String_Rot13 = rot13(va_arg(Lista, char *));
+
+	return (String_Print(String_Rot13));
+}
