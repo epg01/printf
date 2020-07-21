@@ -87,7 +87,7 @@ int Print_Unknown(const char *String)
  * Return: Length of the number.
  */
 
-int Print_Binario(int Number, int Legth)
+int Print_Binario(long int Number, int Legth)
 {
 	if ((Number / 2) == 1)
 	{
