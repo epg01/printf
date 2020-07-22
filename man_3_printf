@@ -1,0 +1,119 @@
+./" This is the manpage of the _printf function to print with format */
+.TH _PRINTF 1 "17 Mar 2020" "GNU" "_printf man page"
+.SH NAME
+.B _printf
+- print with especific format
+.SH SYNOPSIS
+.B _printf
+.I FORMAT [ARGUMENT]...
+.SH DESCRIPTION
+Print data introduced by argument based on a format.
+FORMAT controls the output as in C printf. Interpreted seciences are:
+
+.B %[FORMAT] - Syntax that specifies the start of a new format for the output.
+
+.I Diferent types of format:
+
+.B %%:   
+print a single %. - specifies that the function identifies the format start (%) as a string and prints it as such.
+
+.B %c:   
+Char format (character) - specifies that it will print a character corresponding to its ASCII code.
+
+.B %s:   
+String format (string) - specifies to print a character string.
+
+.B %d, %i:   
+int format (int) - specifies an integer. Signed decimal conversion of an integer
+
+.B %r:
+Reverse string - prints an inverted text string.
+
+.B %u: 
+Print an unsigned int number.
+
+.B %x:
+Convert a number in to a hexadecimal format in lowercase.
+
+.B %X:
+Convert a number in to a hexadecimal formato in uppercase.
+
+.B %o:
+Conert a number in to a octal format.
+
+.B %b:
+Conver a number in to a binary format.
+
+
+.SH EXAMPLES
+int main()
+{
+    char *character = "R";
+    char *Name = "Roro";
+    int Number = 20;
+
+    _printf("%c, ", Character);
+    _printf("%s, ", Name);
+    _printf("%i.\\n", Number);
+
+}
+
+.B OUTPUT: 
+R, Roro, 20.
+
+This function print diferent types of variables, like char, int, or even character string.
+in case the variable type is different, the format must correspond to the type of variable put in the function.
+
+We should note that in the output the format is replaced by the value of the specified variable, in case there is more than a single variable there must be a type of format wherever it is printed, like this:
+
+int main()
+{
+    char character = 'x';
+    char *name = "Holberton";
+    int number = 15;
+
+    _printf("%c, %s, %i.\\n", character, name, number);
+
+}
+
+.B OUTPUT:
+x, Holberton, 15.
+
+It is the same output, only with one function call, in case we need to insert a new line, we can use the option '\\n' in the place where we need to jump, and the output prints a jump in the place where we find the option '\\n'.
+
+.B Print a unsigned int
+
+int main() {
+    unsigned int number = 0;
+    _printf("%u", number );
+
+}
+
+.B OUTPUT
+0
+
+
+.B Convert a number in to hexadecimal form.
+
+int main() {
+    int number;
+    _printf("Lowercase hexadecimal: %x.\n", number );
+    _printf("Uppercase hexadecimal: %X.\n", number);
+    _printf("Octal: %u.\n", number);
+    _printf("Binary: %b.\n", number);
+    
+}
+
+.B OUTPUT
+Lowercase hexadecimal: e.
+Uppercase hexadecimal: E.
+Octal: 1.
+Binary: 1100.
+
+
+
+.SH RETURN VALUE
+Upon successful return, these functions return the number of
+characters printed (excluding the null byte used to end output to strings).
+.SH AUTHOR
+Written by Emmanuel Palacio Gaviria
