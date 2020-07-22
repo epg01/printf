@@ -7,8 +7,9 @@
  *    and unsigned int.
  */
 
-#define NULL ((void *)0)
+#define NULL           ((void *)0)
 #define POWER_OF_10    10
+#define SIZEBUFFER     1024
 
 /*
  * Libraries to be able to call the write function, to be able to use the

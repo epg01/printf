@@ -11,13 +11,13 @@ void llenarBuffer(char **Buff, const char **format)
 {
 	static int Counter;
 
-	while ((**format) && ((**format) != '%') && Counter < 1)
+	while ((**format) && ((**format) != '%') && Counter < SIZEBUFFER)
 	{
 		*(*Buff)++ = *(*format)++;
 		Counter++;
 	}
 
-	if (Counter == 1)
+	if (Counter == SIZEBUFFER)
 		Counter = 0;
 }
 
@@ -43,20 +43,20 @@ int _printf(const char *format, ...)
 	int Solve_Number = 0;
 	va_list Pointer_Argument;
 
-	char Buffer[1];
+	char Buffer[SIZEBUFFER];
 	char *P_Next = Buffer;
 	char *P_Next_Free = Buffer;
 
 	va_start(Pointer_Argument, format);
 	while (format && *format)
 	{
-		if (Number_Of_Character_Impreso >= 1)
+		if (Number_Of_Character_Impreso > SIZEBUFFER)
 		{
 			P_Next = P_Next_Free = Buffer;
 			Solve_Number +=  Number_Of_Character_Impreso;
 			Number_Of_Character_Impreso = 0;
 		}
-		if (P_Next < Buffer + 1)
+		if (P_Next < Buffer + SIZEBUFFER)
 		{
 			llenarBuffer(&P_Next_Free, &format);
 
