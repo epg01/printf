@@ -22,6 +22,8 @@ There can be a space between% and the special character.
 
 > Number: [4]
 
+***Note: This function does not take into account The Width Option of the C language printf
+
 | Special Character | Descripction                                                                 |
 | ----------------- | ---------------------------------------------------------------------------- |
 | c                 | Print a singlecharacter                                                      |
@@ -34,3 +36,43 @@ There can be a space between% and the special character.
 | %                 | Print a percent sign (\%also works)                                          |
 | b                 | Print binary numbers                                                         |
 | p                 | Memory address, variables that have the ability to add address (pointers)    |
+
+### requirements 📋
+
+_Linux distribution_
+_C compiler_
+
+### Instalation 🔧
+
+_Clone repository_
+
+```
+git clone https://github.com/epg01/printf.git
+```
+
+The code is compiled with the ```gcc 4.8.4``` compiler using the ```-Wall -Werror -Wextra``` and ```-pedantic``` flags, therefore to get the executable file use the following command.
+
+>> gcc -Wall -Werror -Wextra -pedantic *.c
+
+### Code examples⌨️
+
+_Explain what these tests verify and why_
+
+```
+int main()
+{
+    char Caracter = 'Y';
+    char *Nme = "Holberton";
+    int Nmber = 10
+
+    _printf("%c, ", Caracter);
+    _printf("%s, ", Nme);
+    _printf("%i.\\n", Nmber);
+
+}
+
+OUTPUT: 
+Y,Holberton, 10
+
+This function print diferent types of variables, like char, int, or even character string.
+in case the variable type is different, the format must correspond to the type of variable put in the function.
