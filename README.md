@@ -21,3 +21,16 @@ There can be a space between% and the special character.
 > _printf("Number: [%"Space Character" d]", Number);
 
 > Number: [4]
+
+| Special Character | Descripction                                                                 |
+| ----------------- | ---------------------------------------------------------------------------- |
+| c                 | Print a singlecharacter                                                      |
+| d                 | Print adecimal (base 10) number                                              |
+| i                 | Print aninteger in base 10                                                   |
+| o                 | Print a number inoctal (base 8)                                              |
+| s                 | Print astring of characters                                                  |
+| u                 | Print anunsigned decimal (base 10) number                                    |     
+| x                 | Print a number in hexidecimal (base 16)                                      |
+| %                 | Print a percent sign (\%also works)                                          |
+| b                 | Print binary numbers                                                         |
+| p                 | Memory address, variables that have the ability to add address (pointers)    |
